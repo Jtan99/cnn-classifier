@@ -1,6 +1,5 @@
 import tensorflow as tf
 from PIL import Image
-from tensorflow import _KerasLazyLoader
 from tensorflow.keras.models import load_model
 import numpy as np
 import pandas as pd
@@ -17,16 +16,16 @@ def make_prediction(image):
   img_width = 180
 
   image = image.resize((img_height, img_width))
-  image = np.array(image) / 255.0
-  img_arr = tf.keras.utils.array_to_img(image)
-  img_bat = tf.expand_dims(img_arr, 0)
+  img_arr = tf.keras.utils.img_to_array(image)
+  img_tensor = tf.convert_to_tensor(img_arr, dtype=tf.float32)
+  img_bat = tf.expand_dims(img_tensor, 0)
   prediction = model.predict(img_bat)
   return prediction
 
 model = load_model("Image_classify.keras")
 data_cat = read_csv_to_list("categories.csv")
 
-path = os.path.join(os.getcwd(),"Fruits_vegetables","test", "carrot", "Image_1.jpg")
+# path = os.path.join(os.getcwd(),"Fruits_vegetables","test", "carrot", "Image_1.jpg")
 
 # image = tf.keras.utils.load_img(path, target_size=(img_height, img_width))
 # img_arr = tf.keras.utils.array_to_img(image)
