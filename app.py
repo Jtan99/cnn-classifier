@@ -22,8 +22,7 @@ def make_prediction(image):
   prediction = model.predict(img_bat)
   return prediction
 
-model_path = os.path.join(os.getcwd(),"Image_classify.keras")
-model = load_model(model_path, compile=False)
+model = load_model("Image_classify.h5")
 data_cat = read_csv_to_list("categories.csv")
 
 # path = os.path.join(os.getcwd(),"Fruits_vegetables","test", "carrot", "Image_1.jpg")
