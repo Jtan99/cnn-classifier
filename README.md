@@ -9,7 +9,8 @@
 - [(Optional) Customize the Model and App](#optional-customize-the-model-and-app)
 
 ## Introduction
-Welcome to the CNN Classifier Project! This project utilizes TensorFlow to build a convolutional neural network (CNN) model capable of classifying images of various fruits and vegetables. Additionally, we have developed a simple web application using Streamlit, allowing users to upload their own images for classification.
+Welcome to the CNN Classifier Project! This project utilizes TensorFlow to build a convolutional neural network (CNN) model capable of classifying images of various fruits and vegetables. Additionally, we have developed a simple web application using Streamlit, allowing users to upload their own images for classification. A live demo is hosted on Streamlit ([https://cnn-classifier-lmgvujmxonthuj6f8szqca.streamlit.app/](https://cnn-classifier-lmgvujmxonthuj6f8szqca.streamlit.app/))
+![image](https://github.com/Jtan99/cnn-classifier/assets/51930622/0175b3be-676d-48f1-8237-adb25c2f696c)
 
 
 ## Features Overview
@@ -41,7 +42,7 @@ It is recommended to use a virtual environment to manage dependencies. You can i
 Follow the instructions in the Requirements section to create and activate a virtual environment, and install the required dependencies.
 
 4. **Download and Prepare Dataset**:  
-Download the dataset (if not included in the repository) and place it in the appropriate directory. (TODO: include link here)
+Dataset is not provided, contact me or create your own.
 
 5. **Train the Model**:  
 Open and run the Jupyter notebook classifier.ipynb to train the TensorFlow model. This notebook will load the dataset, preprocess the images, and train the model. The trained model will be saved as Image_classify.keras.
